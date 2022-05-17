@@ -7,7 +7,7 @@ import singleSpaReact from "single-spa-react";
 
 import Home from './screens/Home';
 import About from './screens/About';
-import Nav from './Nav';
+import Testing from './screens/Testing';
 
 
 import './index.css';
@@ -15,10 +15,10 @@ import './index.css';
 export default function App() {
   return (
     <BrowserRouter>
-      <Nav />
       <Routes>
-        <Route path="/react-test/home" element={<Home />} />
+        <Route path="/react-test" element={<Home />} />
         <Route path="/react-test/about" element={<About />} />
+        <Route exact path="/react-test/testing/:id" element={<Testing />} />
       </Routes>
     </BrowserRouter>
   );

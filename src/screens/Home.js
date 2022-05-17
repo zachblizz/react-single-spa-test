@@ -1,6 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router";
 
 export default function Home() {
+    const navigate = useNavigate();
+
+    function handleClick() {
+        navigate('/react-test/about');
+    }
+
     return (
         <div
             style={{
@@ -9,6 +16,7 @@ export default function Home() {
             }}
         >
             Home Screen
+            <button onClick={handleClick}>about</button>
         </div>
     );
 }

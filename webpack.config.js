@@ -44,7 +44,7 @@ module.exports = {
             name: "reactTest",
             filename: "remoteEntry.js",
             exposes: {
-                "./Actual": "./src/Actual.jsx",
+                "react-test": "./src/Actual.jsx",
             },
             shared: {
                 ...deps,
